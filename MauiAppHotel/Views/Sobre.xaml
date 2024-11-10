@@ -7,7 +7,7 @@
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10">
-        <Label Text="Sobre o que se trata InnTouch?"
+        <Label Text="Sobre o que se trata o InnTouch?"
                FontFamily="MerriweatherBold"
                FontSize="40"
                TextColor="White"/>
@@ -47,7 +47,11 @@
             </VerticalStackLayout>
         </Frame>
         
-        <Button Text="Avançar"/>
+        <Button Text="Avançar" Clicked="Button_Clicked"
+                FontFamily="MerriweatherBold"
+                TextColor="White"
+                HorizontalOptions="Center"
+                BackgroundColor="{StaticResource SecondaryDarkText}"/>
         
     </VerticalStackLayout>
 </ContentPage>

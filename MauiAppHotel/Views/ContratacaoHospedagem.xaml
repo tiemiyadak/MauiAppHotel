@@ -13,7 +13,7 @@
                FontSize="40"
                TextColor="White"/>
 
-        <Frame Padding="10"
+        <Frame Padding="20"
                BackgroundColor="Black"
                BorderColor="{StaticResource SecondaryDarkText}">
             <VerticalStackLayout>
@@ -22,7 +22,7 @@
 
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos:"
-                           FontFamily="MerriweatherRegular"
+                           FontFamily="MerriweatherBold"
                            TextColor="White"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
@@ -39,7 +39,7 @@
 
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Crianças:"
-                           FontFamily="MerriweatherRegular"
+                           FontFamily="MerriweatherBold"
                            TextColor="White"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
@@ -56,7 +56,7 @@
                 </Grid>
 
                 <Label Text="Escolha sua suíte"
-                       FontFamily="MerriweatherRegular"
+                       FontFamily="MerriweatherBold"
                        TextColor="White"/>
 
                 <Picker x:Name="pck_quarto"
@@ -68,16 +68,16 @@
                 <Frame Padding="10"
                        Margin="10"
                        BackgroundColor="Black">
-                    
+
                     <VerticalStackLayout>
                         <Label Text="Período da estadia"
-                               FontFamily="MerriweatherRegular"
+                               FontFamily="MerriweatherBold"
                                TextColor="White"/>
 
                         <HorizontalStackLayout>
                             <Label Text="Check-In:"
                                    FontFamily="MerriweatherRegular"
-                                   TextColor="White"/>
+                                   TextColor="{StaticResource SecondaryDarkText}"/>
                             <DatePicker x:Name="dtpck_checkin"
                                         DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy"
@@ -87,7 +87,7 @@
                         <HorizontalStackLayout>
                             <Label Text="Check-Out:"
                                    FontFamily="MerriweatherRegular"
-                                   TextColor="White"/>
+                                   TextColor="{StaticResource SecondaryDarkText}"/>
                             <DatePicker x:Name="dtpck_checkout"
                                         Format="dd/MM/yyyy"
                                         TextColor="White"/>
@@ -96,12 +96,22 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" Clicked="Button_Clicked"
-                        BackgroundColor="{StaticResource SecondaryDarkText}"
-                        FontFamily="MerriweatherBold"
-                        TextColor="White"/>
-                
             </VerticalStackLayout>
         </Frame>
+
+        <StackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="Avançar" Clicked="Button_Clicked"
+            BackgroundColor="{StaticResource SecondaryDarkText}" 
+            FontFamily="MerriweatherBold" 
+            TextColor="White" 
+            Padding="10, 5"/>
+
+            <Button Text="Voltar" Clicked="Button_Clicked_1"
+            BackgroundColor="{StaticResource SecondaryDarkText}"  
+            FontFamily="MerriweatherBold"  
+            TextColor="White"  
+            Padding="10, 5"/>
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
