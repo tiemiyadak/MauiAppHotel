@@ -1,12 +1,104 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
-             Title="ContratacaoHospedagem">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem" 
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        <Label Text="Calculo da diária"
+               FontFamily="MerriweatherBold"
+               FontSize="40"
+               TextColor="White"/>
+
+        <Frame Padding="10"
+               BackgroundColor="Black"
+               BorderColor="{StaticResource SecondaryDarkText}">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, 2*">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos:"
+                           FontFamily="MerriweatherRegular"
+                           TextColor="White"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           FontFamily="MerriweatherRegular"
+                           TextColor="{StaticResource SecondaryDarkText}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:"
+                           FontFamily="MerriweatherRegular"
+                           TextColor="White"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           FontFamily="MerriweatherRegular"
+                           TextColor="{StaticResource SecondaryDarkText}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_criancas}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1"/>
+                </Grid>
+
+                <Label Text="Escolha sua suíte"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="White"/>
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua acomodação"
+                        FontFamily="MerriweatherRegular"
+                        TextColor="White"/>
+
+                <Frame Padding="10"
+                       Margin="10"
+                       BackgroundColor="Black">
+                    
+                    <VerticalStackLayout>
+                        <Label Text="Período da estadia"
+                               FontFamily="MerriweatherRegular"
+                               TextColor="White"/>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-In:"
+                                   FontFamily="MerriweatherRegular"
+                                   TextColor="White"/>
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy"
+                                        TextColor="White"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-Out:"
+                                   FontFamily="MerriweatherRegular"
+                                   TextColor="White"/>
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"
+                                        TextColor="White"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Button Text="Avançar"
+                        BackgroundColor="{StaticResource SecondaryDarkText}"
+                        FontFamily="MerriweatherBold"
+                        TextColor="White"/>
+            </VerticalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>
