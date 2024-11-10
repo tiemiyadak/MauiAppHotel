@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        <Label Text="Sobre o que se trata InnTouch?"
+               FontFamily="MerriweatherBold"
+               FontSize="40"
+               TextColor="White"/>
+
+        <Frame Padding="10"
+               BackgroundColor="Black"
+               Margin="10"
+               BorderColor="{StaticResource SecondaryDarkText}"
+               CornerRadius="5">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Desenvolvedor:"
+                       FontSize="20"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="White"/>
+                <Label Text="Tiemi Laryssa Miyada Konopka"
+                       FontSize="18"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="{StaticResource SecondaryDarkText}"/>
+
+                <Label Text="Ano de Desenvolvimento:"
+                       FontSize="20"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="White"/>
+                <Label Text="2024"
+                       FontSize="18"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="{StaticResource SecondaryDarkText}"/>
+
+                <Label Text="Descrição do Aplicativo:"
+                       FontSize="20"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="White"/>
+                <Label Text="Seja bem-vindo(a) ao InnTouch, a solução mais prática para hospedagem. Nosso objetivo é tornar a busca e reserva de acomodações rápida e segura. Com um aplicativo fácil de usar e suporte eficiente, proporcionamos tranquilidade e conveniência para hóspedes e anfitriões. Descubra como viajar com mais praticidade e conforto com o InnTouch em apenas alguns toques!"
+                       FontFamily="MerriweatherRegular"
+                       TextColor="White"
+                       LineBreakMode="WordWrap"/>
+            </VerticalStackLayout>
+        </Frame>
+        
+        <Button Text="Avançar"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
